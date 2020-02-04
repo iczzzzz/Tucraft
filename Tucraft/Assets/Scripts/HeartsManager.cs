@@ -4,62 +4,54 @@ using UnityEngine;
 
 public class HeartsManager : MonoBehaviour
 {
-	#region Singleton
-	
-	public static HeartsManager instance;
-	
+    public static HeartsManager instance;
+
+    public Heart[] hearts;
+
 	void Awake() {
+        /* Singleton */
 		if (instance != null) {
 			Debug.LogWarning("More than one instance of HeartsManager found!");
 			return;
 		}
-		
 		instance = this;
-	}
-	
-	#endregion
-		
-	public Heart[] hearts;
-	
-    // Start is called before the first frame update
-    void Start()
-    {
+
         hearts = new Heart[10];
         hearts = gameObject.GetComponentsInChildren<Heart>();
     }
 	
-	public void SetNHearts(float n) {
-		for (int i=0; i<hearts.Length; i++) {
+	public void SetNHearts(float n, bool animation)
+    {
+        for (int i=0; i<hearts.Length; i++) {
 			if (n == 0.5f) {
-				hearts[i].SetHalf();
+				hearts[i].SetHalf(animation);
 				n -= 0.5f;
 			}
 			else if (n > 0) {
-				hearts[i].SetFull();
+				hearts[i].SetFull(animation);
 				n -= 1f;
 			}
 			else {
-				hearts[i].SetVoid();
+				hearts[i].SetVoid(animation);
 			}
 		}
-		
 	}
 	
-	void SetAllFull() {
+	void SetAllFull(bool animation) {
 		for (int i=0; i<hearts.Length; i++) {
-			hearts[i].SetFull();
+            hearts[i].SetFull(animation);
 		}
 	}
 	
-	void SetAllHalf() {
-		for (int i=0; i<hearts.Length; i++) {
-			hearts[i].SetHalf();
+	void SetAllHalf(bool animation) {
+        for (int i=0; i<hearts.Length; i++) {
+			hearts[i].SetHalf(animation);
 		}
 	}
 	
-	void SetAllVoid() {
-		for (int i=0; i<hearts.Length; i++) {
-			hearts[i].SetVoid();
+	void SetAllVoid(bool animation) {
+        for (int i=0; i<hearts.Length; i++) {
+			hearts[i].SetVoid(animation);
 		}
 	}
 	

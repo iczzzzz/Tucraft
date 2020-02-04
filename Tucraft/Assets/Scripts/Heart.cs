@@ -13,22 +13,22 @@ public class Heart : MonoBehaviour
 	
     Animator heartAnim;
 	
-	void Start() {
+	void Awake() { 
         heartAnim = gameObject.GetComponent<Animator>();
 	}
 	
-	public void SetFull() {
-		image.sprite = fullHeart;
-        heartAnim.SetTrigger("move");
+	public void SetFull(bool animation) { 
+        image.sprite = fullHeart;
+        if (animation) heartAnim.SetTrigger("move");
 	}
 	
-	public void SetHalf() {
-		image.sprite = halfHeart;
-        heartAnim.SetTrigger("move");
-	}
+	public void SetHalf(bool animation) {
+        image.sprite = halfHeart;
+        if (animation) heartAnim.SetTrigger("move");
+    }
 	
-	public void SetVoid() {
-		image.sprite = voidHeart;
-        heartAnim.SetTrigger("move");
-	}
+	public void SetVoid(bool animation) {
+        image.sprite = voidHeart;
+        if (animation) heartAnim.SetTrigger("move");
+    }
 }

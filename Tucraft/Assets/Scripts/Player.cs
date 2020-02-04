@@ -1,104 +1,158 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	
-	public float speedF = 5f, speedSprint = 10f, speedB = 2f, speedS = 3f;
-	public float gravity = -9.81f * 2;
-	public float jumpHeight = 1.5f;
-	public float groundDistance = 0.3f;
-	
-	public CharacterController controller;
-	public Transform groundCheck;
-	public LayerMask groundMask;
-	
-	Vector3 velocity;
-	bool isGrounded, isSprinting;
-	float lives = 10f;
+
+    const float SPEED_FRONT = 5f, SPEED_SPRINT = 10f, SPEED_BACK = 2f, SPEED_SIDE = 3f;
+    const float WEIGHT = -9.81f * 3, JUMP_HEIGHT = 1.5f, GROUND_DISTANCE = 0.35f;
+    const float MAX_LIVES = 10f;
+
+    public CharacterController controller;
+    public Transform groundCheck;
+    public LayerMask groundMask;
+
+    Vector3 velocity;
+    bool isGrounded, isSprinting;
+    float lives;
+
+
+    private void Start()
+    {
+        lives = MAX_LIVES;
+        HeartsManager.instance.SetNHearts(lives, false);
+    }
 
     // Update is called once per frame
     void Update()
     {
-		isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-		isSprinting = Input.GetButton("Sprint") && (isGrounded || isSprinting);
-		
-		Move();
-		
-		if (isGrounded) {
-			float fallDamage = FallDamage();
-			if (fallDamage > 0) {
-				StopFalling();
-				Hit(fallDamage);
-			}
-			if (Input.GetButton("Jump")) {
-				Jump();
-			}
-		}
-		else {
-			Fall();
-		}
+        isGrounded = Physics.CheckSphere(groundCheck.position, GROUND_DISTANCE, groundMask);
+        isSprinting = Input.GetButton("Sprint") && (isGrounded || isSprinting);
+
+        Move();
+
+        if (isGrounded)
+        {
+            float fallDamage = FallDamage();
+            if (fallDamage > 0)
+            {
+                StopFalling();
+                Hit(fallDamage);
+            }
+            if (Input.GetButton("Jump"))
+            {
+                Jump();
+            }
+        }
+        else
+        {
+            Fall();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Eat(0.5f);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Hit(0.5f);
+        }
     }
-	
-	float FallDamage() {
-		float vel = Mathf.Abs(velocity.y);
-		float damage = vel/5 - 3.5f;
-		return damage<0 ? 0 : (damage);
-	}
-	
-	void StopFalling() {
-		velocity.y = 0;
-	}
-	
-	float RoundPointFive(float n) {
-		return ((float)Mathf.Round(n*2)) / 2.0f;
-	}
-	
-	public void Hit(float damage = 1) {
-		lives -= RoundPointFive(damage);
-		HeartsManager.instance.SetNHearts(lives);
-		Debug.Log("Lives: " + lives);
-		if (lives <= 0) {
-			lives = 0;
-			Die();
-		}
-	}
-	
-	void Die() {
-		//Debug.Log("Dead");
-	}
-	
-	void Move() {
+
+
+
+
+    /*****   MOVEMENT   *****/ 
+
+    void Move()
+    {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-		float speed = CalculateSpeed(x, z);
-		
-		Vector3 move = transform.right * x + transform.forward * z;
-		controller.Move(move * speed * Time.deltaTime);
-	}
-		
-	
-	void Jump(float height = -1) {
-		if (height < 0) {	// Normal height
-			velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-			controller.Move(velocity * Time.deltaTime);
-		}
-		else {	// Input height
-			velocity.y = Mathf.Sqrt(height * -2f * gravity);
-			controller.Move(velocity * Time.deltaTime);
-		}
-	}
-	
-	void Fall() {
-		velocity.y += gravity * Time.deltaTime;
-		controller.Move(velocity * Time.deltaTime);
-	}
-	
-	float CalculateSpeed(float x, float z) {
-		if (Mathf.Abs(x) > Mathf.Abs(z)) return speedS;	// Left or Right
-		if (z < 0) return speedB;	// Backwards
-		if (isSprinting) return speedSprint;	// Sprinting
-		return speedF;	// Normal
-	}
+        float speed = CalculateSpeed(x, z);
+
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(move * speed * Time.deltaTime);
+    }
+
+    void Jump(float height = -1)
+    {
+        if (height < 0)
+        {   // Normal height
+            velocity.y = Mathf.Sqrt(JUMP_HEIGHT * -2f * WEIGHT);
+            controller.Move(velocity * Time.deltaTime);
+        }
+        else
+        {   // Input height
+            velocity.y = Mathf.Sqrt(height * -2f * WEIGHT);
+            controller.Move(velocity * Time.deltaTime);
+        }
+    }
+
+    void Fall()
+    {
+        velocity.y += WEIGHT * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+    }
+
+    float FallDamage()
+    {
+        float vel = Mathf.Abs(velocity.y);
+        float damage = vel / 5 - 3.5f;
+        return damage < 0 ? 0 : (damage);
+    }
+
+    void StopFalling()
+    {
+        velocity.y = 0;
+    }
+
+
+
+
+    /*****   LIVES   *****/
+
+    void Eat(float kal)
+    {
+        float prevLives = lives;
+        lives = Mathf.Clamp(lives + RoundPointFive(kal), 0f, MAX_LIVES);
+        if (prevLives < MAX_LIVES) {
+            HeartsManager.instance.SetNHearts(lives, true);
+        }
+        //Debug.Log("Lives: " + lives);
+    }
+
+    void Hit(float damage)
+    {
+        float prevLives = lives;
+        lives = Mathf.Clamp(lives - RoundPointFive(damage), 0f, MAX_LIVES);
+        if (prevLives > 0f) {
+            HeartsManager.instance.SetNHearts(lives, true);
+            if (lives <= 0) {
+                Die();
+            }
+        }
+        //Debug.Log("Lives: " + lives);
+    }
+
+    void Die()
+    {
+        Debug.Log("Dead");
+    }
+
+
+
+
+    /*****   OTHERS   *****/
+
+    float CalculateSpeed(float x, float z)
+    {
+        if (Mathf.Abs(x) > Mathf.Abs(z)) return SPEED_SIDE; // Left or Right
+        if (z < 0) return SPEED_BACK;   // Backwards
+        if (isSprinting) return SPEED_SPRINT;   // Sprinting
+        return SPEED_FRONT; // Normal
+    }
+
+    float RoundPointFive(float n)
+    {
+        return ((float)Mathf.Round(n * 2)) / 2.0f;
+    }
 }
