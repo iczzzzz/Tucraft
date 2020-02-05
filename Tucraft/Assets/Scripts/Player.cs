@@ -37,46 +37,53 @@ public class Player : MonoBehaviour
 
         Move();
 
-        if (isGrounded)
-        {
+        if (isGrounded)  {
             float fallDamage = FallDamage();
-            if (fallDamage > 0)
-            {
+            if (fallDamage > 0) {
                 StopFalling();
                 Hit(fallDamage);
             }
-            if (Input.GetButton("Jump"))
-            {
+            if (Input.GetButton("Jump")) {
                 Jump();
             }
         }
-        else
-        {
+        else {
             Fall();
         }
 
-        if (Input.GetButtonDown("Interact"))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 50f))
-            {
-                if (Vector3.Distance(transform.position, hit.point) <= INTERACT_RADIUS)
-                {
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
-                    if (interactable != null)
-                    {
-                        interactable.Interact();
-                    }
-                }
+        Interactable interactable;
+        if (RaycastWithDistance(out interactable) && interactable != null) {
+            if (Input.GetButtonDown("Interact")) {
+                interactable.Interact();
             }
+            else {
+                interactable.SetHighlighted(interactable);
+            }
+
         }
 
         if (Input.GetButtonDown("Action")) {
             DoAction();
         }
 
+    }
+
+    bool RaycastWithDistance(out Interactable inter)
+    {
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 50f))
+        {
+            if (Vector3.Distance(transform.position, hit.point) <= INTERACT_RADIUS)
+            {
+                inter = hit.collider.GetComponent<Interactable>();
+                return true;
+            }
+        }
+
+        inter = null;
+        return false;
     }
 
     private void OnDrawGizmosSelected()
