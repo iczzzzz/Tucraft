@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     const float SPEED_FRONT = 5f, SPEED_SPRINT = 10f, SPEED_BACK = 2f, SPEED_SIDE = 3f;
     const float WEIGHT = -9.81f * 3, JUMP_HEIGHT = 1.5f, GROUND_DISTANCE = 0.35f;
     const float MAX_LIVES = 10f;
+    const float INTERACT_RADIUS = 5f;
 
     public CharacterController controller;
     public Transform groundCheck;
@@ -14,7 +15,13 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     bool isGrounded, isSprinting;
     float lives;
+    Camera cam;
 
+
+    private void Awake()
+    {
+        cam = Camera.main;
+    }
 
     private void Start()
     {
@@ -48,16 +55,40 @@ public class Player : MonoBehaviour
             Fall();
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Interact"))
         {
-            Eat(0.5f);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 50f))
+            {
+                if (Vector3.Distance(transform.position, hit.point) <= INTERACT_RADIUS)
+                {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        interactable.Interact();
+                    }
+                }
+            }
         }
-        if (Input.GetMouseButtonDown(1))
-        {
-            Hit(0.5f);
+
+        if (Input.GetButtonDown("Action")) {
+            DoAction();
         }
+
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, INTERACT_RADIUS);
+    }
+
+    void DoAction()
+    {
+        Inventory.instance.UseSelected();
+    }
 
 
 

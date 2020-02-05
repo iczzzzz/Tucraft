@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\inventoryslot.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="inventory.svg">
+  <defs
+     id="defs2">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4527"
+       x="-0.084"
+       width="1.168"
+       y="-0.084"
+       height="1.168">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.8575001"
+         id="feGaussianBlur4529" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4921"
+       x="-0.372"
+       width="1.744"
+       y="-0.372"
+       height="1.744">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="12.654643"
+         id="feGaussianBlur4923" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4640"
+       x="-0.108"
+       width="1.216"
+       y="-0.108"
+       height="1.216">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.6739287"
+         id="feGaussianBlur4642" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4826"
+       x="-0.4726281"
+       width="1.9452562"
+       y="-0.41864196"
+       height="1.8372839">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.0092664"
+         id="feGaussianBlur4828" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-967.90013"
+     inkscape:cy="422.9666"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#efefef;fill-opacity:1;fill-rule:nonzero;stroke:#a2a2a2;stroke-width:1.534;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect4485"
+       width="279.81128"
+       height="94.224983"
+       x="-337.02026"
+       y="260.84882"
+       ry="7.5380116"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\inventory.png" />
+    <rect
+       style="opacity:1;fill:#888888;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect4497"
+       width="81.64286"
+       height="81.64286"
+       x="-320.5238"
+       y="121.99702"
+       ry="7.5595427"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\inventoryslot.png" />
+    <rect
+       ry="7.5595427"
+       y="121.99702"
+       x="-320.5238"
+       height="81.64286"
+       width="81.64286"
+       id="rect4531"
+       style="opacity:1;fill:#e0e0e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4640)"
+       transform="matrix(1.0558406,0,0,1.0558406,15.61874,-9.0918748)" />
+    <rect
+       ry="7.5595427"
+       y="122.37499"
+       x="-230.56548"
+       height="81.64286"
+       width="81.64286"
+       id="rect4927"
+       style="opacity:1;fill:#6f6f6f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4527)" />
+    <rect
+       transform="matrix(0.77803146,0,0,0.77803146,27.873206,36.518548)"
+       style="opacity:1;fill:#3e3e3e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4921)"
+       id="rect4929"
+       width="81.64286"
+       height="81.64286"
+       x="-320.5238"
+       y="121.99702"
+       ry="7.5595427" />
+    <rect
+       style="opacity:1;fill:#6f6f6f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4527)"
+       id="rect4931"
+       width="81.64286"
+       height="81.64286"
+       x="-140.98512"
+       y="122.37499"
+       ry="7.5595427" />
+    <rect
+       ry="7.5595427"
+       y="121.99702"
+       x="-320.5238"
+       height="81.64286"
+       width="81.64286"
+       id="rect4933"
+       style="opacity:1;fill:#3e3e3e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4921)"
+       transform="matrix(0.77803146,0,0,0.77803146,117.45356,36.518548)" />
+    <circle
+       style="opacity:1;fill:#e03737;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="path4503"
+       r="29.671131"
+       cy="11.061012"
+       cx="-196.35864"
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\apple.png"
+       inkscape:export-xdpi="96.199997"
+       inkscape:export-ydpi="96.199997" />
+    <rect
+       style="opacity:1;fill:#5c2e0f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect4505"
+       width="4.3467202"
+       height="24.379463"
+       x="-198.81548"
+       y="-36.186008"
+       ry="2.1733601"
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\apple.png"
+       inkscape:export-xdpi="96.199997"
+       inkscape:export-ydpi="96.199997" />
+    <path
+       style="fill:#88ec91;fill-opacity:1;stroke:none;stroke-width:0.33385834px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -197.92631,-27.625998 c 0.42823,-5.11054 8.69462,-4.980818 13.51573,-4.7966 4.82111,0.184217 10.16855,5.366257 13.741,6.05886 3.57244,0.692602 9.23576,1e-6 9.23576,1e-6 -3.86872,7.366744 -18.91051,9.450978 -24.93813,8.573331 -6.02764,-0.877648 -11.98259,-4.725052 -11.55436,-9.835592 z"
+       id="path4509"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="zzzczz"
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\apple.png"
+       inkscape:export-xdpi="96.199997"
+       inkscape:export-ydpi="96.199997" />
+    <path
+       inkscape:export-ydpi="96.199997"
+       inkscape:export-xdpi="96.199997"
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\apple.png"
+       cx="-196.35864"
+       cy="11.061012"
+       r="29.671131"
+       id="path4644"
+       style="opacity:1;fill:#e03737;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    <ellipse
+       inkscape:export-ydpi="96.199997"
+       inkscape:export-xdpi="96.199997"
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\potato.png"
+       cx="-257.85101"
+       cy="143.86543"
+       id="circle4646"
+       style="opacity:1;fill:#f2c666;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.42268848;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       rx="29.671131"
+       ry="37.154678"
+       transform="rotate(28.464695)" />
+    <ellipse
+       transform="rotate(28.464695,-13.240747,-16.829109)"
+       ry="20.972929"
+       rx="16.748646"
+       style="opacity:1;fill:#eba816;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.36754978;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4826)"
+       id="ellipse4648"
+       cy="143.86543"
+       cx="-257.85101"
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\apple.png"
+       inkscape:export-xdpi="96.199997"
+       inkscape:export-ydpi="96.199997" />
+  </g>
+</svg>
