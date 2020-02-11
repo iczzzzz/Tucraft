@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 4642709970403103307}
   - component: {fileID: 4642709970403103304}
   - component: {fileID: 4642709970403103305}
-  - component: {fileID: 4642709970403103306}
   - component: {fileID: 4642709970403103311}
   m_Layer: 0
   m_Name: Capsule
@@ -134,13 +133,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4642709970403103412}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.046768133, y: -0, z: -0, w: 0.9989058}
   m_LocalPosition: {x: 0, y: 0.94, z: 0}
   m_LocalScale: {x: 0.10034592, y: 0.19147004, z: 0.10034592}
   m_Children: []
   m_Father: {fileID: 4642709970204427765}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5.361, y: 0, z: 0}
 --- !u!33 &4642709970403103304
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -187,20 +186,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &4642709970403103306
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4642709970403103412}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &4642709970403103311
 Animator:
   serializedVersion: 3
