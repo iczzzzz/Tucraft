@@ -81,9 +81,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="-967.90013"
-     inkscape:cy="422.9666"
+     inkscape:zoom="0.7"
+     inkscape:cx="-935.07479"
+     inkscape:cy="327.78723"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -92,7 +92,7 @@
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:snap-global="false" />
+     inkscape:snap-global="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -132,24 +132,31 @@
        inkscape:export-ydpi="96"
        inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\inventoryslot.png" />
     <rect
+       inkscape:export-filename="D:\jocs\Tucraft\Tucraft\Assets\Sprites\inventoryslot.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
        ry="7.5595427"
        y="121.99702"
        x="-320.5238"
        height="81.64286"
        width="81.64286"
-       id="rect4531"
-       style="opacity:1;fill:#e0e0e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4640)"
-       transform="matrix(1.0558406,0,0,1.0558406,15.61874,-9.0918748)" />
+       id="rect4830"
+       style="opacity:1;fill:#888888;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    <path
+       style="opacity:1;fill:#e0e0e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8.63960266;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4640)"
+       d="M -1182.8574 461.0918 C -1198.686 461.0918 -1211.4277 473.8335 -1211.4277 489.66211 L -1211.4277 741.0918 C -1211.4277 756.92041 -1198.686 769.66211 -1182.8574 769.66211 L -931.42773 769.66211 C -915.59912 769.66211 -902.85742 756.92041 -902.85742 741.0918 L -902.85742 489.66211 C -902.85742 473.8335 -915.59912 461.0918 -931.42773 461.0918 L -1182.8574 461.0918 z "
+       transform="scale(0.26458333)"
+       id="rect4531" />
     <rect
        ry="7.5595427"
-       y="122.37499"
-       x="-230.56548"
+       y="121.30592"
+       x="-98.534332"
        height="81.64286"
        width="81.64286"
        id="rect4927"
        style="opacity:1;fill:#6f6f6f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4527)" />
     <rect
-       transform="matrix(0.77803146,0,0,0.77803146,27.873206,36.518548)"
+       transform="matrix(0.77803146,0,0,0.77803146,159.90435,35.44947)"
        style="opacity:1;fill:#3e3e3e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4921)"
        id="rect4929"
        width="81.64286"
@@ -162,8 +169,8 @@
        id="rect4931"
        width="81.64286"
        height="81.64286"
-       x="-140.98512"
-       y="122.37499"
+       x="-8.9539766"
+       y="121.30592"
        ry="7.5595427" />
     <rect
        ry="7.5595427"
@@ -173,7 +180,7 @@
        width="81.64286"
        id="rect4933"
        style="opacity:1;fill:#3e3e3e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter4921)"
-       transform="matrix(0.77803146,0,0,0.77803146,117.45356,36.518548)" />
+       transform="matrix(0.77803146,0,0,0.77803146,249.48471,35.44947)" />
     <circle
        style="opacity:1;fill:#e03737;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="path4503"
